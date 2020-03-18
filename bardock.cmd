@@ -1075,6 +1075,7 @@ triggerall = command = "a" || command = "b" || command = "x" || command = "y"
 trigger1 = stateno = [1120,1123]
 trigger2 = stateno = 255
 trigger3 = stateno = 1202 && movecontact
+trigger4 = stateno = 1201 && movecontact
 
 ;Fly Fwd Punch finish
 [State -1, Fly Fwd Punch finish]
@@ -1083,6 +1084,7 @@ value = 1125
 triggerall = movecontact
 triggerall = command = "y"
 trigger1 = stateno = 1202 && ctrl = 1
+trigger2 = stateno = 1201 && movecontact
 
 ;===========================================================================
 ;===========================================================================
