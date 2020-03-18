@@ -2112,7 +2112,7 @@ ignorehitpause = 1
 type = BindToParent
 trigger1 = parent, stateno = 3503
 time = 1
-pos = 10,-55
+pos = 15,-55
 ignorehitpause = 1
 
 [State 0, HitDef]

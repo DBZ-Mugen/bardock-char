@@ -967,44 +967,30 @@ volume = 500
 [State 0, Explod]
 type = Explod
 trigger1 = AnimElem = 2
-anim = 7026
-ID = 7026
-pos = 30,-57
+anim = 7022
+ID = 7022
+pos = 75,-56
 postype = p1
+facing = -1
 bindtime = -1
-removetime = 30
+removetime = 21
 scale = .4,.4
 sprpriority = 3
-shadow = 0,0,0
-ownpal = 0
-removeongethit = 0
+removeongethit = 1
 
-[State 0, ModifyExplod]
-type = ModifyExplod
-trigger1 = animelemtime(2) >= 20
-ID = 7026
-pos = 30,-57
+[State 0, Explod]
+type = Explod
+trigger1 = animelemtime(2) = 21
+anim = 7000
+ID = 7000
+pos = 71,-56
 postype = p1
-scale = .3,.3
+facing = -1
+bindtime = -1
+removetime = 12
+scale = .4,.4
 sprpriority = 3
-
-[State 0, ModifyExplod]
-type = ModifyExplod
-trigger1 = animelemtime(2) >= 22
-ID = 7026
-pos = 30,-57
-postype = p1
-scale = .2,.2
-sprpriority = 3
-
-[State 0, ModifyExplod]
-type = ModifyExplod
-trigger1 = animelemtime(2) >= 24
-ID = 7026
-pos = 30,-57
-postype = p1
-scale = .15,.05
-sprpriority = 3
+removeongethit = 1
 
 [State 0, Helper]
 type = Helper
@@ -1018,11 +1004,6 @@ postype = p1
 keyctrl = 1
 size.xscale = .4
 size.yscale = .5
-
-[State 0, CtrlSet]
-type = CtrlSet
-trigger1 = Animelem = 3 && var(3) != 1
-value = 1
 
 [State 0, ChangeState]
 type = ChangeState

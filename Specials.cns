@@ -1365,7 +1365,6 @@ trigger1 = AnimElem = 4
 value = 3,9
 volume = 500
 
-
 [State 0, Explod]
 type = Explod
 trigger1 = AnimElem = 4
@@ -1912,10 +1911,27 @@ volume = 500
 [State 0, Explod]
 type = Explod
 trigger1 = AnimElem = 2
-anim = 7501
-ID = 7026
-pos = 10,-55
+anim = 7022
+ID = 7022
+pos = 80,-55
 postype = p1
+facing = -1
+bindtime = -1
+removetime = 100
+scale = .6,.6
+sprpriority = 3
+shadow = 0,0,0
+ownpal = 0
+removeongethit = 1
+
+[State 0, Explod]
+type = Explod
+trigger1 = AnimElem = 2
+anim = 7000
+ID = 7000
+pos = 65,-55
+postype = p1
+facing = -1
 bindtime = -1
 removetime = 106
 scale = .6,.6
@@ -1929,33 +1945,6 @@ type = HitBy
 trigger1 = 1
 value = SCA,SA,HA,SP,HP,ST,HT
 time = 1
-
-[State 0, ModifyExplod]
-type = ModifyExplod
-trigger1 = animelemtime(2) >= 100
-ID = 7026
-pos = 10,-55
-postype = p1
-scale = .4,.4
-sprpriority = 3
-
-[State 0, ModifyExplod]
-type = ModifyExplod
-trigger1 = animelemtime(2) >= 102
-ID = 7026
-pos = 10,-55
-postype = p1
-scale = .3,.3
-sprpriority = 3
-
-[State 0, ModifyExplod]
-type = ModifyExplod
-trigger1 = animelemtime(2) >= 104
-ID = 7026
-pos = 10,-55
-postype = p1
-scale = .15,.15
-sprpriority = 3
 
 [State 0, VelSet]
 type = VelSet
@@ -1974,7 +1963,7 @@ helpertype = normal
 name = "beam"
 ID = 7500
 stateno = 7500
-pos = 10,-55
+pos = 20,-55
 postype = p1
 keyctrl = 1
 size.xscale = .5
