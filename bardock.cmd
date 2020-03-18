@@ -139,7 +139,8 @@ command = D, B, c
 
 [Command]
 name = "elbowfwd"
-command = D, B, x
+command = F, B, F, y
+time = 25
 
 [Command]
 name = "downkick"
@@ -582,14 +583,13 @@ triggerall = command = "elbowfwd" && power >= 500
 trigger1 = ctrl
 trigger1 = stateno != 1212
 trigger2 = stateno = [1006,1010]
-trigger3 = stateno = 210 && command = "holdfwd"
 
 ;Elbowfwd
 [State -1, Elbowfwd]
 type = ChangeState
 value = 1212
 triggerall = movehit && power >= 500
-trigger1 = stateno = 210 && command = "holdfwd"
+trigger1 = stateno = 210 && command = "y" && command = "holdfwd"
 
 ;Fly Up Punch
 [State -1, Fly Up Punch]
