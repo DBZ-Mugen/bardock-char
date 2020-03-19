@@ -71,6 +71,10 @@ name = "IA_10"
 command = x,b,c,x,y,z,a,b,c
 time = 1
 
+;-| hyper attack |-----------------------------------------------------
+
+; TODO
+
 ;-| special power attacks |-----------------------------------------------------
 
 [Command] ; in air
@@ -584,12 +588,12 @@ trigger1 = ctrl
 trigger1 = stateno != 1212
 trigger2 = stateno = [1006,1010]
 
-;Elbowfwd
+;Elbowfwd (combination with y)
 [State -1, Elbowfwd]
 type = ChangeState
 value = 1212
 triggerall = movehit && power >= 500
-trigger1 = stateno = 210 && command = "y" && command = "holdfwd"
+trigger1 = stateno = 210 && command = "y" && command = "holdback"
 
 ;Fly Up Punch
 [State -1, Fly Up Punch]
@@ -631,7 +635,7 @@ trigger1 = stateno = 241
 type = ChangeState
 value = 1202
 triggerall = command = "flypunchfwd"
-trigger1 = statetype = S
+trigger1 = statetype = S || statetype = A
 trigger1 = ctrl
 trigger2 = stateno = [1006,1010]
 
@@ -650,18 +654,9 @@ trigger2 = stateno = [1006,1010]
 [State -1, Zanzoken]
 type = changestate
 triggerall = command = "z" && power >= 100
+triggerall = !movehit
 triggerall = command != "holddown"
 trigger1 = ctrl && statetype = S
-trigger2 = movetype = H && gethitvar(hitcount) <= 2
-trigger3 = stateno = [1006,1010]
-value = 770
-
-[State -1, Zanzoken down]
-type = changestate
-triggerall = command = "z" && power >= 100
-triggerall = command = "holddown"
-triggerall = pos y < 0
-trigger1 = ctrl
 trigger2 = movetype = H && gethitvar(hitcount) <= 2
 trigger3 = stateno = [1006,1010]
 value = 770
@@ -748,6 +743,7 @@ value = 1006
 trigger1 = command = "z"
 trigger1 = statetype = A
 trigger1 = ctrl
+trigger1 = !movehit
 trigger1 = stateno != [1006,1010]
 
 ;Fly Fwd
@@ -919,17 +915,6 @@ trigger3 = animelemtime(2) >= 5
 ;===========================================================================
 ;===========================================================================
 ;Combo attacks
-
-; ;Teleport Back Strong Kick
-; [State -1, Teleport Back Strong Kick]
-; type = ChangeState
-; value = 252
-; triggerall = command = "b" && command = "a"
-; trigger1 = stateno = 250 || stateno = 251
-; trigger1 = movehit
-; trigger2 = stateno = [1200,1212]
-; trigger2 = movehit
-; trigger3 = stateno = 771
 
 ;Teleport Back Strong Kick
 [State -1, Teleport Back Strong Kick]
@@ -1291,7 +1276,7 @@ trigger2 = stateno = [230,239]
 type = ChangeState
 value = 1202
 triggerall = command = "y"
-triggerall = command = "holdback"
+triggerall = command = "holdfwd"
 triggerall = movecontact
 trigger1 = stateno = [200,210]
 trigger2 = stateno = [230,239]

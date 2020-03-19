@@ -1792,20 +1792,6 @@ size.yscale = 0.5
 type = Helper
 triggerall = anim = 15081
 trigger1 = AnimElem = 2
-helpertype = normal
-name = "bigfireball"
-ID = 7012
-stateno = 7012
-pos = 25,-40
-postype = p1
-ownpal = 0
-size.xscale = 0.5
-size.yscale = 0.5
-
-[State 0, Helper]
-type = Helper
-triggerall = anim = 15081
-trigger1 = AnimElem = 2
 helpertype = normal ;player
 name = "bigfbhandfx"
 ID = 6002
