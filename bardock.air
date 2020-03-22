@@ -179,7 +179,15 @@ Clsn2Default: 1
   Clsn2[0] = -19, -71, 20, 0
 Loopstart
 105,1, 0,0, 3, 
-105,0, 0,0, 3, 
+105,0, 0,0, 3,
+
+; Hop backwards stop
+[Begin Action 106]
+Clsn2Default: 1
+  Clsn2[0] = -19, -71, 20, 0
+Loopstart
+105,1, 0,0, 3, 
+105,0, 0,0, 3,
 
 ; GUARDSTART (stand)
 [Begin Action 120]

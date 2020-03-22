@@ -994,7 +994,7 @@ triggerall = command = "b"
 triggerall = stateno = [1110,1114]
 trigger1 = movehit && var(16) = 5 && Time = [12,30]
 
-;Mega Puño
+;Mega Puï¿½o
 [State -1, FINAL AIR PUNCH X]
 type = ChangeState
 value = 1117
