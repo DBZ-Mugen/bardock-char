@@ -1570,12 +1570,6 @@ type = CtrlSet
 trigger1 = var(40) != 0 && win
 value = 0
 
-[State 0, VarSet]
-type = VarSet
-trigger1 = roundstate = 0 && backedgedist = 87
-v = 18
-value = 1
-
 ;---------------------------------------------------------------------------
 ; States that are executed when in self's state file (use statedef -3)
 ;---------------------------------------------------------------------------
