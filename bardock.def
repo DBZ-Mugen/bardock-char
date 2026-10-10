@@ -32,5 +32,5 @@ pal7 = raditz.act
 pal8 = turles.act
 
 [Arcade]
-intro.storyboard = intro.def
-ending.storyboard = ending.def
+;intro.storyboard = intro.def
+;ending.storyboard = ending.def
